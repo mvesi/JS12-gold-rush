@@ -1,4 +1,13 @@
 .topo { 
 	width: 100%;
 	height: 100%;
+	position: relative;
+
+}
+
+.pin {
+	display: none;
+	width: 25px;
+	height: 25px;
+
 }

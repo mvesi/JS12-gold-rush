@@ -1,7 +1,20 @@
 $(document).on('ready', function() {
-  var pin = $('<img src="pin-locator.png">');
-  $('.topo').on('click', function() {
-  	$('.container').append(pin);
+
+$(".topo").on("click", function(event){
+
+	var offset = $(this).offset();
+	var x = (event.pageX - offset.left);
+	var y = (event.pageY - offset.top);
+
+	console.log(x);
+	console.log(y);
+
+  	$('.pin')
+  		.css('position','absolute')
+  		.css('top', y)
+  		.css('left', x)
+  		.show();
+
   });
 
 
