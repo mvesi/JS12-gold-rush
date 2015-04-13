@@ -1,5 +1,8 @@
 $(document).on('ready', function() {
 
+
+
+
 $(".topo").on("click", function(event){
 
 	var offset = $(this).offset();
@@ -9,7 +12,11 @@ $(".topo").on("click", function(event){
 	console.log(x);
 	console.log(y);
 
-  	$('.pin')
+	var pin = $('<img class="pin" src="pin-locator.png">');
+
+$('.container').append(pin);
+	
+  	$(pin)
   		.css('position','absolute')
   		.css('top', y)
   		.css('left', x)
